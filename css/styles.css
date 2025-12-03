@@ -2,10 +2,10 @@
 
 /*
 color palette
-Dark Charcoal #333333
-White Smoke #F7F4F3
-Sky Blue #96CCD7
-Marigold #B18121
+pastol light blue #C6E7FF
+pastol lighter blue #D4F6FF
+pastol white #FBFBFB
+pastol orange #FFDDAE
 */
 
 * {
@@ -16,7 +16,7 @@ Marigold #B18121
 
 body {
     font-family: "Poppins", sans-serif;
-    background-color: #595959;
+    background-color: #C6E7FF;
     color: #333;
     line-height: 1.6;
 }
@@ -29,12 +29,12 @@ body {
 }
 
 #menu-toggle {
-    display: none;
+    display: block;
 }
 
 .nav-bar {
-    background-color: #333;
-    color: #F7F4F3;
+    background-color: #FBFBFB;
+    color: black;
     padding: 1rem;
     text-align: center;
     width: 75%;
@@ -44,7 +44,7 @@ body {
 }
 
 .nav-bar a {
-    color: #fff;
+    color: black;
     text-decoration: none;
     margin: 0 2rem;
     display: inline-block;
@@ -60,7 +60,7 @@ body {
     'wght' 400,
     'GRAD' 0,
     'opsz' 48;
-    color: #fff;
+    color: black;
     float: right;
     cursor: pointer;
     display: none;
@@ -69,15 +69,15 @@ body {
 
 @media screen and (max-width: 795px) {
     .nav-bar-container {
-        justify-content: flex-end;
+        justify-content: center;
         margin-left: 10px;
     }
     .nav-bar {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: flex-end;
         height: auto;
-        width: 20%;
         margin-right: 0.5rem;
         margin-bottom: 0.5rem;
         border-radius: 20px;
@@ -92,4 +92,84 @@ body {
         padding-left: 20px; /*for centering*/
     }
     
+}
+
+.head {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 790px) {
+    .head {
+        font-size: 1.8rem;
+    }
+}
+
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 0.5rem;
+    gap: 20px;
+}
+
+.home .intro {
+    padding: 1rem;
+    background-color: #FBFBFB;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: black;
+    width: 50%;
+    min-width: 300px;
+}
+
+.home .intro .hi {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+@media screen and (max-width: 795px) {
+    .home {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home .intro {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+.home .profile-img img {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.buttons .btn {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 100px;
+    color: #333;
+    background: #FFDDAE;
+    transition: background-color 0.2s, color 0.3s;
+}
+
+.buttons .btn:hover {
+    background-color: #FFC078;
+    color: #fff;
 }
